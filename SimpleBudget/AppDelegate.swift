@@ -38,25 +38,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create window.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         // Create app coordinator.
-        self.setupAppCoordinator()
+        self.setupSpendingsCoordinator()
         // Display window.
         self.window!.backgroundColor = UIColor.white
         self.window!.makeKeyAndVisible()
         return true
     }
 
-    // MARK: - APP COORDINATOR
+    // MARK: - SPENDINGS COORDINATOR
 
-    private var appCoordinator: AppCoordinator!
+    private var spendingsCoordinator: SpendingsCoordinator!
     
-    private func setupAppCoordinator() {
-        self.appCoordinator = AppCoordinator()
-        self.window!.rootViewController = self.appCoordinator.rootVC
+    private func setupSpendingsCoordinator() {
+        self.spendingsCoordinator = SpendingsCoordinator()
+        self.window!.rootViewController = self.spendingsCoordinator.rootVC
 
         // If root VC changes, re-assign it to the window.
-        self.appCoordinator.rootVCChanged = { [weak self] in
+        self.spendingsCoordinator.rootVCChanged = { [weak self] in
             guard let this = self else { return }
-            this.window!.rootViewController = this.appCoordinator.rootVC
+            this.window!.rootViewController = this.spendingsCoordinator.rootVC
         }
     }
 

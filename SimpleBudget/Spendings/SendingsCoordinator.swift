@@ -24,7 +24,7 @@ freely, subject to the following restrictions:
 
 import UIKit
 
-class AppCoordinator
+class SpendingsCoordinator
 {
 
     // MARK: - SETUP
