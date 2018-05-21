@@ -12,8 +12,13 @@
 		9F0E5A3A20B2F913009E3982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0E5A3820B2F913009E3982 /* LaunchScreen.storyboard */; };
 		9F0E5A4320B2FC08009E3982 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E5A4120B2FC07009E3982 /* AppCoordinator.swift */; };
 		9F0E5A4420B2FC08009E3982 /* SimpleCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E5A4220B2FC08009E3982 /* SimpleCallback.swift */; };
-		9F0E5A4720B2FC31009E3982 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E5A4520B2FC31009E3982 /* MainVC.swift */; };
-		9F0E5A4820B2FC31009E3982 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0E5A4620B2FC31009E3982 /* MainVC.xib */; };
+		9F43564220B3125A0066F2F4 /* UIView+Embed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43563E20B3125A0066F2F4 /* UIView+Embed.swift */; };
+		9F43564320B3125A0066F2F4 /* UIView+NibFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43563F20B3125A0066F2F4 /* UIView+NibFile.swift */; };
+		9F43564420B3125A0066F2F4 /* UITableViewCellTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43564020B3125A0066F2F4 /* UITableViewCellTemplate.swift */; };
+		9F43564520B3125A0066F2F4 /* UIViewControllerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43564120B3125A0066F2F4 /* UIViewControllerTemplate.swift */; };
+		9F43564920B313550066F2F4 /* SpendingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43564720B313550066F2F4 /* SpendingsView.swift */; };
+		9F43564A20B313550066F2F4 /* SpendingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F43564820B313550066F2F4 /* SpendingsView.xib */; };
+		9F43564C20B315B90066F2F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F43564B20B315B90066F2F4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +29,13 @@
 		9F0E5A3B20B2F913009E3982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F0E5A4120B2FC07009E3982 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9F0E5A4220B2FC08009E3982 /* SimpleCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCallback.swift; sourceTree = "<group>"; };
-		9F0E5A4520B2FC31009E3982 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		9F0E5A4620B2FC31009E3982 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		9F43563E20B3125A0066F2F4 /* UIView+Embed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Embed.swift"; sourceTree = "<group>"; };
+		9F43563F20B3125A0066F2F4 /* UIView+NibFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibFile.swift"; sourceTree = "<group>"; };
+		9F43564020B3125A0066F2F4 /* UITableViewCellTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellTemplate.swift; sourceTree = "<group>"; };
+		9F43564120B3125A0066F2F4 /* UIViewControllerTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTemplate.swift; sourceTree = "<group>"; };
+		9F43564720B313550066F2F4 /* SpendingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsView.swift; sourceTree = "<group>"; };
+		9F43564820B313550066F2F4 /* SpendingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpendingsView.xib; sourceTree = "<group>"; };
+		9F43564B20B315B90066F2F4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,7 @@
 		9F0E5A2320B2F913009E3982 = {
 			isa = PBXGroup;
 			children = (
+				9F43563D20B312460066F2F4 /* External */,
 				9F0E5A2E20B2F913009E3982 /* SimpleBudget */,
 				9F0E5A2D20B2F913009E3982 /* Products */,
 			);
@@ -60,14 +71,34 @@
 			children = (
 				9F0E5A2F20B2F913009E3982 /* AppDelegate.swift */,
 				9F0E5A4120B2FC07009E3982 /* AppCoordinator.swift */,
-				9F0E5A4520B2FC31009E3982 /* MainVC.swift */,
-				9F0E5A4620B2FC31009E3982 /* MainVC.xib */,
+				9F43564620B312DE0066F2F4 /* Spendings */,
 				9F0E5A4220B2FC08009E3982 /* SimpleCallback.swift */,
 				9F0E5A3620B2F913009E3982 /* Assets.xcassets */,
+				9F43564B20B315B90066F2F4 /* Localizable.strings */,
 				9F0E5A3820B2F913009E3982 /* LaunchScreen.storyboard */,
 				9F0E5A3B20B2F913009E3982 /* Info.plist */,
 			);
 			path = SimpleBudget;
+			sourceTree = "<group>";
+		};
+		9F43563D20B312460066F2F4 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				9F43564020B3125A0066F2F4 /* UITableViewCellTemplate.swift */,
+				9F43563E20B3125A0066F2F4 /* UIView+Embed.swift */,
+				9F43563F20B3125A0066F2F4 /* UIView+NibFile.swift */,
+				9F43564120B3125A0066F2F4 /* UIViewControllerTemplate.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		9F43564620B312DE0066F2F4 /* Spendings */ = {
+			isa = PBXGroup;
+			children = (
+				9F43564720B313550066F2F4 /* SpendingsView.swift */,
+				9F43564820B313550066F2F4 /* SpendingsView.xib */,
+			);
+			path = Spendings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +160,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F0E5A4820B2FC31009E3982 /* MainVC.xib in Resources */,
+				9F43564C20B315B90066F2F4 /* Localizable.strings in Resources */,
+				9F43564A20B313550066F2F4 /* SpendingsView.xib in Resources */,
 				9F0E5A3A20B2F913009E3982 /* LaunchScreen.storyboard in Resources */,
 				9F0E5A3720B2F913009E3982 /* Assets.xcassets in Resources */,
 			);
@@ -142,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F43564220B3125A0066F2F4 /* UIView+Embed.swift in Sources */,
+				9F43564420B3125A0066F2F4 /* UITableViewCellTemplate.swift in Sources */,
+				9F43564920B313550066F2F4 /* SpendingsView.swift in Sources */,
+				9F43564520B3125A0066F2F4 /* UIViewControllerTemplate.swift in Sources */,
 				9F0E5A4320B2FC08009E3982 /* AppCoordinator.swift in Sources */,
-				9F0E5A4720B2FC31009E3982 /* MainVC.swift in Sources */,
 				9F0E5A4420B2FC08009E3982 /* SimpleCallback.swift in Sources */,
+				9F43564320B3125A0066F2F4 /* UIView+NibFile.swift in Sources */,
 				9F0E5A3020B2F913009E3982 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,31 +24,41 @@ freely, subject to the following restrictions:
 
 import UIKit
 
-class AppCoordinator
-{
+class SpendingsView: UIView {
 
     // MARK: - SETUP
 
-    var rootVC: UIViewController!
-    var rootVCChanged: SimpleCallback?
-
-    init()
-    {
-        self.setupSpendings()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setupTableView()
     }
 
-    // MARK: - SPENDINGS
-
-    private var spendingsView: SpendingsView!
-
-    private func setupSpendings()
-    {
-        self.spendingsView = UIView.loadFromNib()
-        let vc = UIViewControllerTemplate<SpendingsView>(mainView: self.spendingsView)
-        vc.title = NSLocalizedString("Spendings.Title", comment: "")
-        let nc = UINavigationController(rootViewController: vc)
-        self.rootVC = nc
+    // MARK: - TABLE VIEW
+    
+    @IBOutlet private var tableView: UITableView!
+    
+    private func setupTableView() {
+        //self.tableView.dataSource = self
     }
 
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 3
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        return 4
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        return UITableViewCell()
+        // TODO dequeue
+    }
 }
 
