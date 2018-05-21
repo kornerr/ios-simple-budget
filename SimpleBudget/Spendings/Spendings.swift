@@ -22,32 +22,22 @@ freely, subject to the following restrictions:
 3. This notice may not be removed or altered from any source distribution.
 */
 
-import UIKit
-
-class SpendingsCoordinator
+class Spendings
 {
+    private(set) var items = [SpendingsItem]()
+    var itemsChanged: SimpleCallback?
 
-    // MARK: - SETUP
-
-    var rootVC: UIViewController!
-    var rootVCChanged: SimpleCallback?
-
-    init()
+    func addItem(_ item: SpendingsItem)
     {
-        self.setupSpendings()
+        self.items.append(item)
+        self.reportItemChanges()
     }
 
-    // MARK: - SPENDINGS
-
-    private var spendingsView: SpendingsView!
-
-    private func setupSpendings()
+    private func reportItemChanges()
     {
-        self.spendingsView = UIView.loadFromNib()
-        let vc = UIViewControllerTemplate<SpendingsView>(mainView: self.spendingsView)
-        vc.title = NSLocalizedString("Spendings.Title", comment: "")
-        let nc = UINavigationController(rootViewController: vc)
-        self.rootVC = nc
+        if let report = self.itemsChanged {
+            report()
+        }
     }
 
 }
