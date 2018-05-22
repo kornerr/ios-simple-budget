@@ -100,6 +100,11 @@ class SpendingsCoordinator
         item.sum = 1515
         item.categories = ["Life", "Fine"]
         self.spendings.addItem(item)
+
+        item.date = yesterday
+        item.sum = 23230
+        item.categories = ["Life", "Rent"]
+        self.spendings.addItem(item)
     }
 
 }

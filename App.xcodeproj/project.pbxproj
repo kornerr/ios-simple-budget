@@ -21,6 +21,8 @@
 		9F43564C20B315B90066F2F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F43564B20B315B90066F2F4 /* Localizable.strings */; };
 		9F43564F20B31ECB0066F2F4 /* SpendingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43564D20B31ECA0066F2F4 /* SpendingsItem.swift */; };
 		9F43565020B31ECB0066F2F4 /* Spendings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43564E20B31ECA0066F2F4 /* Spendings.swift */; };
+		9FCDE46C20B4509200ABA7D7 /* SpendingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE46A20B4509100ABA7D7 /* SpendingsItemView.swift */; };
+		9FCDE46D20B4509200ABA7D7 /* SpendingsItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE46B20B4509200ABA7D7 /* SpendingsItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		9F43564B20B315B90066F2F4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9F43564D20B31ECA0066F2F4 /* SpendingsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsItem.swift; sourceTree = "<group>"; };
 		9F43564E20B31ECA0066F2F4 /* Spendings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spendings.swift; sourceTree = "<group>"; };
+		9FCDE46A20B4509100ABA7D7 /* SpendingsItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsItemView.swift; sourceTree = "<group>"; };
+		9FCDE46B20B4509200ABA7D7 /* SpendingsItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpendingsItemView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				9F43564D20B31ECA0066F2F4 /* SpendingsItem.swift */,
 				9F43564720B313550066F2F4 /* SpendingsView.swift */,
 				9F43564820B313550066F2F4 /* SpendingsView.xib */,
+				9FCDE46A20B4509100ABA7D7 /* SpendingsItemView.swift */,
+				9FCDE46B20B4509200ABA7D7 /* SpendingsItemView.xib */,
 			);
 			path = Spendings;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCDE46D20B4509200ABA7D7 /* SpendingsItemView.xib in Resources */,
 				9F43564C20B315B90066F2F4 /* Localizable.strings in Resources */,
 				9F43564A20B313550066F2F4 /* SpendingsView.xib in Resources */,
 				9F0E5A3A20B2F913009E3982 /* LaunchScreen.storyboard in Resources */,
@@ -180,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCDE46C20B4509200ABA7D7 /* SpendingsItemView.swift in Sources */,
 				9F43564F20B31ECB0066F2F4 /* SpendingsItem.swift in Sources */,
 				9F43564220B3125A0066F2F4 /* UIView+Embed.swift in Sources */,
 				9F43564420B3125A0066F2F4 /* UITableViewCellTemplate.swift in Sources */,

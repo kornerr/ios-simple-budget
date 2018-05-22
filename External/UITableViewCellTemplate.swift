@@ -1,7 +1,7 @@
 
 import UIKit
 
-class UITableViewTemplateCell<ItemView: UIView>: UITableViewCell {
+class UITableViewCellTemplate<ItemView: UIView>: UITableViewCell {
 
     var itemView: ItemView!
 

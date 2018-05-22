@@ -24,11 +24,13 @@ freely, subject to the following restrictions:
 
 import UIKit
 
-class SpendingsView: UIView, UITableViewDataSource {
+class SpendingsView: UIView, UITableViewDataSource
+{
 
     // MARK: - SETUP
 
-    override func awakeFromNib() {
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
         self.setupTableView()
     }
@@ -57,10 +59,15 @@ class SpendingsView: UIView, UITableViewDataSource {
 
     // MARK: - TABLE VIEW
     
+
     @IBOutlet private var tableView: UITableView!
     
     private func setupTableView() {
         self.tableView.dataSource = self
+        self.tableView.register(
+            CellSpendingsItem.self,
+            forCellReuseIdentifier: CellSpendingsItemId
+        )
     }
 
     func tableView(
@@ -74,10 +81,37 @@ class SpendingsView: UIView, UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .black
+        let cell = self.cellSpendingsItem(at: indexPath)
         return cell
-        // TODO dequeue
     }
+
+    // MARK: - SPENDINGS ITEM CELL
+
+    private let CellSpendingsItemId = "CellSpendingsId"
+    private typealias CellSpendingsItemView = SpendingsItemView
+    private typealias CellSpendingsItem = UITableViewCellTemplate<CellSpendingsItemView>
+
+    private func cellSpendingsItem(at indexPath: IndexPath) -> CellSpendingsItem {
+        let cell =
+            self.tableView.dequeueReusableCell(
+                withIdentifier: CellSpendingsItemId,
+                for: indexPath
+            )
+            as! CellSpendingsItem
+
+        let item = self.items[indexPath.row]
+
+        // Day.
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: item.date)
+        cell.itemView.setDay(day)
+        // Sum.
+        cell.itemView.setSum(item.sum)
+        // Categories.
+        cell.itemView.setCategories(item.categories)
+
+        return cell
+    }
+
 }
 

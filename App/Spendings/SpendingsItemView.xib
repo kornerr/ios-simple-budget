@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SpendingsItemView" customModule="App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Np8-0S-PAq">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq0-4M-guj">
+                            <rect key="frame" x="8" y="20" width="32" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3F-FL-xL1">
+                            <rect key="frame" x="48" y="20" width="80" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4re-Wu-7bv">
+                            <rect key="frame" x="136" y="20" width="176" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="4re-Wu-7bv" firstAttribute="centerY" secondItem="Np8-0S-PAq" secondAttribute="centerY" id="4a7-BJ-hDB"/>
+                        <constraint firstItem="s3F-FL-xL1" firstAttribute="width" secondItem="Np8-0S-PAq" secondAttribute="width" multiplier="0.25" id="DBE-Dh-Uwp"/>
+                        <constraint firstItem="iq0-4M-guj" firstAttribute="leading" secondItem="Np8-0S-PAq" secondAttribute="leading" constant="8" id="Swb-1q-vLY"/>
+                        <constraint firstItem="s3F-FL-xL1" firstAttribute="leading" secondItem="iq0-4M-guj" secondAttribute="trailing" constant="8" id="UQf-jB-PY9"/>
+                        <constraint firstItem="iq0-4M-guj" firstAttribute="centerY" secondItem="Np8-0S-PAq" secondAttribute="centerY" id="asG-Ik-KIX"/>
+                        <constraint firstItem="s3F-FL-xL1" firstAttribute="centerY" secondItem="Np8-0S-PAq" secondAttribute="centerY" id="sxA-5f-Cu3"/>
+                        <constraint firstAttribute="trailing" secondItem="4re-Wu-7bv" secondAttribute="trailing" constant="8" id="tbM-CK-y7R"/>
+                        <constraint firstItem="iq0-4M-guj" firstAttribute="width" secondItem="Np8-0S-PAq" secondAttribute="width" multiplier="0.1" id="wEJ-JO-pJs"/>
+                        <constraint firstItem="4re-Wu-7bv" firstAttribute="leading" secondItem="s3F-FL-xL1" secondAttribute="trailing" constant="8" id="xg2-MD-ub1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Np8-0S-PAq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JdV-FE-ria"/>
+                <constraint firstAttribute="trailing" secondItem="Np8-0S-PAq" secondAttribute="trailing" id="OfG-vl-z5G"/>
+                <constraint firstItem="Np8-0S-PAq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wa7-in-uWk"/>
+                <constraint firstAttribute="bottom" secondItem="Np8-0S-PAq" secondAttribute="bottom" id="wtj-o8-y0f"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="categoriesLabel" destination="4re-Wu-7bv" id="3Gv-0b-bRV"/>
+                <outlet property="dayLabel" destination="iq0-4M-guj" id="zkG-bg-22e"/>
+                <outlet property="sumLabel" destination="s3F-FL-xL1" id="28h-A4-vyK"/>
+            </connections>
+            <point key="canvasLocation" x="52" y="77"/>
+        </view>
+    </objects>
+</document>
