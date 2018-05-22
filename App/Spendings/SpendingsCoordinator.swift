@@ -75,7 +75,9 @@ class SpendingsCoordinator
 
     private func displayAddSpendingVC(from parent: UIViewController)
     {
+        let view: AddSpendingView! = UIView.loadFromNib()
         let vc = AddSpendingVC()
+        vc.mainView = view
         let nc = UINavigationController(rootViewController: vc)
         parent.present(nc, animated: true)
 

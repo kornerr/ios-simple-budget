@@ -27,6 +27,8 @@
 		9FCDE47120B45B5000ABA7D7 /* SpendingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE46F20B45B5000ABA7D7 /* SpendingsVC.xib */; };
 		9FCDE47420B45FCE00ABA7D7 /* AddSpendingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE47220B45FCE00ABA7D7 /* AddSpendingVC.xib */; };
 		9FCDE47520B45FCE00ABA7D7 /* AddSpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE47320B45FCE00ABA7D7 /* AddSpendingVC.swift */; };
+		9FCDE47A20B4665600ABA7D7 /* AddSpendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE47820B4665600ABA7D7 /* AddSpendingView.swift */; };
+		9FCDE47B20B4665600ABA7D7 /* AddSpendingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE47920B4665600ABA7D7 /* AddSpendingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		9FCDE46F20B45B5000ABA7D7 /* SpendingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpendingsVC.xib; sourceTree = "<group>"; };
 		9FCDE47220B45FCE00ABA7D7 /* AddSpendingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSpendingVC.xib; sourceTree = "<group>"; };
 		9FCDE47320B45FCE00ABA7D7 /* AddSpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpendingVC.swift; sourceTree = "<group>"; };
+		9FCDE47820B4665600ABA7D7 /* AddSpendingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpendingView.swift; sourceTree = "<group>"; };
+		9FCDE47920B4665600ABA7D7 /* AddSpendingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSpendingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,16 +117,34 @@
 				9F0E5A4120B2FC07009E3982 /* SpendingsCoordinator.swift */,
 				9F43564E20B31ECA0066F2F4 /* Spendings.swift */,
 				9F43564D20B31ECA0066F2F4 /* SpendingsItem.swift */,
+				9FCDE47620B4658D00ABA7D7 /* Spendings */,
+				9FCDE47720B4659C00ABA7D7 /* AddSpending */,
+			);
+			path = Spendings;
+			sourceTree = "<group>";
+		};
+		9FCDE47620B4658D00ABA7D7 /* Spendings */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDE46E20B45B5000ABA7D7 /* SpendingsVC.swift */,
+				9FCDE46F20B45B5000ABA7D7 /* SpendingsVC.xib */,
 				9F43564720B313550066F2F4 /* SpendingsView.swift */,
 				9F43564820B313550066F2F4 /* SpendingsView.xib */,
 				9FCDE46A20B4509100ABA7D7 /* SpendingsItemView.swift */,
 				9FCDE46B20B4509200ABA7D7 /* SpendingsItemView.xib */,
-				9FCDE46E20B45B5000ABA7D7 /* SpendingsVC.swift */,
-				9FCDE46F20B45B5000ABA7D7 /* SpendingsVC.xib */,
-				9FCDE47320B45FCE00ABA7D7 /* AddSpendingVC.swift */,
-				9FCDE47220B45FCE00ABA7D7 /* AddSpendingVC.xib */,
 			);
 			path = Spendings;
+			sourceTree = "<group>";
+		};
+		9FCDE47720B4659C00ABA7D7 /* AddSpending */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDE47320B45FCE00ABA7D7 /* AddSpendingVC.swift */,
+				9FCDE47220B45FCE00ABA7D7 /* AddSpendingVC.xib */,
+				9FCDE47820B4665600ABA7D7 /* AddSpendingView.swift */,
+				9FCDE47920B4665600ABA7D7 /* AddSpendingView.xib */,
+			);
+			path = AddSpending;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCDE47B20B4665600ABA7D7 /* AddSpendingView.xib in Resources */,
 				9FCDE46D20B4509200ABA7D7 /* SpendingsItemView.xib in Resources */,
 				9FCDE47420B45FCE00ABA7D7 /* AddSpendingVC.xib in Resources */,
 				9F43564C20B315B90066F2F4 /* Localizable.strings in Resources */,
@@ -207,6 +230,7 @@
 				9F43564220B3125A0066F2F4 /* UIView+Embed.swift in Sources */,
 				9F43564420B3125A0066F2F4 /* UITableViewCellTemplate.swift in Sources */,
 				9FCDE47020B45B5000ABA7D7 /* SpendingsVC.swift in Sources */,
+				9FCDE47A20B4665600ABA7D7 /* AddSpendingView.swift in Sources */,
 				9F43565020B31ECB0066F2F4 /* Spendings.swift in Sources */,
 				9F43564920B313550066F2F4 /* SpendingsView.swift in Sources */,
 				9F43564520B3125A0066F2F4 /* UIViewControllerTemplate.swift in Sources */,

@@ -44,6 +44,21 @@ class AddSpendingVC: UIViewController
         self.navigationItem.title = NSLocalizedString("AddSpending.Title", comment: "")
     }
 
+    // MARK: - MAIN VIEW
+
+    var mainView: UIView?
+    {
+        get
+        {
+            return self.view.embeddedView
+        }
+
+        set
+        {
+            self.view.embeddedView = newValue
+        }
+    }
+
     // MARK: - CANCEL
 
     var cancelReport: SimpleCallback?
