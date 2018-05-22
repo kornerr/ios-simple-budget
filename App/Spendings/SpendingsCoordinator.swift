@@ -41,6 +41,7 @@ class SpendingsCoordinator
 
     private var spendings: Spendings!
     private var spendingsView: SpendingsView!
+    private var spendingsVC: SpendingsVC!
 
     private func setupSpendings()
     {
@@ -49,17 +50,18 @@ class SpendingsCoordinator
 
         // Create VC.
         self.spendingsView = UIView.loadFromNib()
-        let vc = UIViewControllerTemplate<SpendingsView>(mainView: self.spendingsView)
-        vc.title = NSLocalizedString("Spendings.Title", comment: "")
-        let nc = UINavigationController(rootViewController: vc)
+        self.spendingsVC = SpendingsVC()
+        self.spendingsVC.mainView = self.spendingsView
+        let nc = UINavigationController(rootViewController: self.spendingsVC)
         self.rootVC = nc
 
-        // Refresh displayed items.
+        // Refresh displayed items when they change.
         self.spendings.itemsChanged = { [weak self] in
             guard let this = self else { return }
             this.spendingsView.items = this.spendings.items
         }
 
+        // Setup stub items.
         self.setupStubSpendingsItems()
     }
 

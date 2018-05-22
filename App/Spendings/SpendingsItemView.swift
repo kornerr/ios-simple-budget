@@ -12,19 +12,6 @@ class SpendingsItemView: UIView
         self.setupSum()
     }
 
-    // MARK: - HEIGHT
-
-    /*
-
-    NOTE Height of 60 is used by TableView by default,
-    NOTE so no need to do anything.
-
-    class func height() -> Float
-    {
-        return 60
-    }
-    */
-    
     // MARK: - DAY
 
     @IBOutlet private var dayLabel: UILabel!

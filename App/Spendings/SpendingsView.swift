@@ -61,6 +61,8 @@ class SpendingsView: UIView, UITableViewDataSource
     
 
     @IBOutlet private var tableView: UITableView!
+    // Use standard row height.
+    private let rowHeight: CGFloat = 44
     
     private func setupTableView() {
         self.tableView.dataSource = self
@@ -68,6 +70,7 @@ class SpendingsView: UIView, UITableViewDataSource
             CellSpendingsItem.self,
             forCellReuseIdentifier: CellSpendingsItemId
         )
+        self.tableView.rowHeight = self.rowHeight
     }
 
     func tableView(
