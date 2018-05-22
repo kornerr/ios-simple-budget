@@ -53,6 +53,53 @@ class SpendingsCoordinator
         vc.title = NSLocalizedString("Spendings.Title", comment: "")
         let nc = UINavigationController(rootViewController: vc)
         self.rootVC = nc
+
+        // Refresh displayed items.
+        self.spendings.itemsChanged = { [weak self] in
+            guard let this = self else { return }
+            this.spendingsView.items = this.spendings.items
+        }
+
+        self.setupStubSpendingsItems()
+    }
+
+    private func setupStubSpendingsItems()
+    {
+        let today = Date()
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today)!
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+
+        var item = SpendingsItem()
+
+        item.date = yesterday
+        item.sum = 300
+        item.categories = ["Products", "Work"]
+        self.spendings.addItem(item)
+
+        item.date = yesterday
+        item.sum = 2900
+        item.categories = ["Products", "Home"]
+        self.spendings.addItem(item)
+
+        item.date = today
+        item.sum = 136
+        item.categories = ["Products", "Home"]
+        self.spendings.addItem(item)
+
+        item.date = today
+        item.sum = 56
+        item.categories = ["Products", "Work"]
+        self.spendings.addItem(item)
+
+        item.date = tomorrow
+        item.sum = 14
+        item.categories = ["Products", "Work"]
+        self.spendings.addItem(item)
+
+        item.date = yesterday
+        item.sum = 1515
+        item.categories = ["Life", "Fine"]
+        self.spendings.addItem(item)
     }
 
 }

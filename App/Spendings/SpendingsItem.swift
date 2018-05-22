@@ -22,43 +22,12 @@ freely, subject to the following restrictions:
 3. This notice may not be removed or altered from any source distribution.
 */
 
-import UIKit
+import Foundation
 
-class SpendingsView: UIView {
-
-    // MARK: - SETUP
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.setupTableView()
-    }
-
-    // MARK: - TABLE VIEW
-    
-    @IBOutlet private var tableView: UITableView!
-    
-    private func setupTableView() {
-        //self.tableView.dataSource = self
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int
-    {
-        return 3
-    }
-
-    func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int
-    ) -> Int {
-        return 4
-    }
-
-    func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
-        return UITableViewCell()
-        // TODO dequeue
-    }
+struct SpendingsItem
+{
+    var date = Date()
+    var sum = Float(0)
+    var categories = [String]()
 }
 

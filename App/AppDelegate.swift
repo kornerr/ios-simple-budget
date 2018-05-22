@@ -49,7 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var spendingsCoordinator: SpendingsCoordinator!
     
-    private func setupSpendingsCoordinator() {
+    private func setupSpendingsCoordinator()
+    {
         self.spendingsCoordinator = SpendingsCoordinator()
         self.window!.rootViewController = self.spendingsCoordinator.rootVC
 

@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9F0E5A2C20B2F913009E3982 /* SimpleBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0E5A2C20B2F913009E3982 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0E5A2F20B2F913009E3982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0E5A3620B2F913009E3982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F0E5A3920B2F913009E3982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				9F43563D20B312460066F2F4 /* External */,
-				9F0E5A2E20B2F913009E3982 /* SimpleBudget */,
+				9F0E5A2E20B2F913009E3982 /* App */,
 				9F0E5A2D20B2F913009E3982 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,12 +65,12 @@
 		9F0E5A2D20B2F913009E3982 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F0E5A2C20B2F913009E3982 /* SimpleBudget.app */,
+				9F0E5A2C20B2F913009E3982 /* App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9F0E5A2E20B2F913009E3982 /* SimpleBudget */ = {
+		9F0E5A2E20B2F913009E3982 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				9F0E5A2F20B2F913009E3982 /* AppDelegate.swift */,
@@ -81,7 +81,7 @@
 				9F0E5A3820B2F913009E3982 /* LaunchScreen.storyboard */,
 				9F0E5A3B20B2F913009E3982 /* Info.plist */,
 			);
-			path = SimpleBudget;
+			path = App;
 			sourceTree = "<group>";
 		};
 		9F43563D20B312460066F2F4 /* External */ = {
@@ -110,9 +110,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F0E5A2B20B2F913009E3982 /* SimpleBudget */ = {
+		9F0E5A2B20B2F913009E3982 /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F0E5A3E20B2F913009E3982 /* Build configuration list for PBXNativeTarget "SimpleBudget" */;
+			buildConfigurationList = 9F0E5A3E20B2F913009E3982 /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				9F0E5A2820B2F913009E3982 /* Sources */,
 				9F0E5A2920B2F913009E3982 /* Frameworks */,
@@ -122,9 +122,9 @@
 			);
 			dependencies = (
 			);
-			name = SimpleBudget;
+			name = App;
 			productName = SimpleBudget;
-			productReference = 9F0E5A2C20B2F913009E3982 /* SimpleBudget.app */;
+			productReference = 9F0E5A2C20B2F913009E3982 /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F0E5A2720B2F913009E3982 /* Build configuration list for PBXProject "SimpleBudget" */;
+			buildConfigurationList = 9F0E5A2720B2F913009E3982 /* Build configuration list for PBXProject "App" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -156,7 +156,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F0E5A2B20B2F913009E3982 /* SimpleBudget */,
+				9F0E5A2B20B2F913009E3982 /* App */,
 			);
 		};
 /* End PBXProject section */
@@ -320,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8379YHJ3XA;
-				INFOPLIST_FILE = SimpleBudget/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = su.kornerr.SimpleBudget;
@@ -336,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8379YHJ3XA;
-				INFOPLIST_FILE = SimpleBudget/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = su.kornerr.SimpleBudget;
@@ -349,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F0E5A2720B2F913009E3982 /* Build configuration list for PBXProject "SimpleBudget" */ = {
+		9F0E5A2720B2F913009E3982 /* Build configuration list for PBXProject "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F0E5A3C20B2F913009E3982 /* Debug */,
@@ -358,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F0E5A3E20B2F913009E3982 /* Build configuration list for PBXNativeTarget "SimpleBudget" */ = {
+		9F0E5A3E20B2F913009E3982 /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F0E5A3F20B2F913009E3982 /* Debug */,

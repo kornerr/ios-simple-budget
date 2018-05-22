@@ -30,10 +30,16 @@ class Spendings
     func addItem(_ item: SpendingsItem)
     {
         self.items.append(item)
-        self.reportItemChanges()
+        self.reportItemsChanged()
     }
 
-    private func reportItemChanges()
+    func updateItem(_ item: SpendingsItem, at id: Int)
+    {
+        self.items[id] = item
+        self.reportItemsChanged()
+    }
+
+    private func reportItemsChanged()
     {
         if let report = self.itemsChanged {
             report()
