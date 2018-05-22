@@ -32,6 +32,60 @@ class AddSpendingVC: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.setupTitle()
+        self.setupCancel()
+        self.setupSave()
+    }
+
+    // MARK: - TITLE
+
+    private func setupTitle()
+    {
+        self.navigationItem.title = NSLocalizedString("AddSpending.Title", comment: "")
+    }
+
+    // MARK: - CANCEL
+
+    var cancelReport: SimpleCallback?
+
+    private func setupCancel()
+    {
+        self.navigationItem.leftBarButtonItem =
+            UIBarButtonItem(
+                barButtonSystemItem: .cancel,
+                target: self,
+                action: #selector(cancel(_:))
+            )
+    }
+
+    @objc func cancel(_ button: UIBarButtonItem)
+    {
+        if let report = self.cancelReport
+        {
+            report()
+        }
+    }
+
+    // MARK: - SAVE
+
+    var saveReport: SimpleCallback?
+
+    private func setupSave()
+    {
+        self.navigationItem.rightBarButtonItem =
+            UIBarButtonItem(
+                barButtonSystemItem: .save,
+                target: self,
+                action: #selector(save(_:))
+            )
+    }
+
+    @objc func save(_ button: UIBarButtonItem)
+    {
+        if let report = self.saveReport
+        {
+            report()
+        }
     }
 
 }

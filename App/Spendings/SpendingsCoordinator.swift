@@ -76,22 +76,21 @@ class SpendingsCoordinator
     private func displayAddSpendingVC(from parent: UIViewController)
     {
         let vc = AddSpendingVC()
-        parent.present(vc, animated: true)
+        let nc = UINavigationController(rootViewController: vc)
+        parent.present(nc, animated: true)
 
-        /*
-        // Cancel addition.
-        vc.cancelReport = { [weak vc] in
-            guard let strongVC = vc else { return }
-            strongVC.dismiss(animated: true)
+        // Cancel.
+        vc.cancelReport = { [weak nc] in
+            guard let strongNC = nc else { return }
+            strongNC.dismiss(animated: true)
         }
 
-        // Add new spending.
-        vc.doneReport = { [weak vc] in
-            guard let strongVC = vc else { return }
-            // TODO save
-            strongVC.dismiss(animated: true)
+        // Save.
+        vc.saveReport = { [weak nc] in
+            guard let strongNC = nc else { return }
+            // TODO save.
+            strongNC.dismiss(animated: true)
         }
- */
     }
 
     // MARK: - STUB
