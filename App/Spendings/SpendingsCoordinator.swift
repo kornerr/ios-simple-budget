@@ -61,9 +61,40 @@ class SpendingsCoordinator
             this.spendingsView.items = this.spendings.items
         }
 
+        // Display 'Add' VC when requested.
+        self.spendingsVC.addReport = { [weak self] in
+            guard let this = self else { return }
+            this.displayAddSpendingVC(from: this.spendingsVC)
+        }
+
         // Setup stub items.
         self.setupStubSpendingsItems()
     }
+
+    // MARK: - SPENDINGS
+
+    private func displayAddSpendingVC(from parent: UIViewController)
+    {
+        let vc = AddSpendingVC()
+        parent.present(vc, animated: true)
+
+        /*
+        // Cancel addition.
+        vc.cancelReport = { [weak vc] in
+            guard let strongVC = vc else { return }
+            strongVC.dismiss(animated: true)
+        }
+
+        // Add new spending.
+        vc.doneReport = { [weak vc] in
+            guard let strongVC = vc else { return }
+            // TODO save
+            strongVC.dismiss(animated: true)
+        }
+ */
+    }
+
+    // MARK: - STUB
 
     private func setupStubSpendingsItems()
     {

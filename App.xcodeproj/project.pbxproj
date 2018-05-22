@@ -25,6 +25,8 @@
 		9FCDE46D20B4509200ABA7D7 /* SpendingsItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE46B20B4509200ABA7D7 /* SpendingsItemView.xib */; };
 		9FCDE47020B45B5000ABA7D7 /* SpendingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE46E20B45B5000ABA7D7 /* SpendingsVC.swift */; };
 		9FCDE47120B45B5000ABA7D7 /* SpendingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE46F20B45B5000ABA7D7 /* SpendingsVC.xib */; };
+		9FCDE47420B45FCE00ABA7D7 /* AddSpendingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE47220B45FCE00ABA7D7 /* AddSpendingVC.xib */; };
+		9FCDE47520B45FCE00ABA7D7 /* AddSpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE47320B45FCE00ABA7D7 /* AddSpendingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		9FCDE46B20B4509200ABA7D7 /* SpendingsItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpendingsItemView.xib; sourceTree = "<group>"; };
 		9FCDE46E20B45B5000ABA7D7 /* SpendingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsVC.swift; sourceTree = "<group>"; };
 		9FCDE46F20B45B5000ABA7D7 /* SpendingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpendingsVC.xib; sourceTree = "<group>"; };
+		9FCDE47220B45FCE00ABA7D7 /* AddSpendingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSpendingVC.xib; sourceTree = "<group>"; };
+		9FCDE47320B45FCE00ABA7D7 /* AddSpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpendingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				9FCDE46B20B4509200ABA7D7 /* SpendingsItemView.xib */,
 				9FCDE46E20B45B5000ABA7D7 /* SpendingsVC.swift */,
 				9FCDE46F20B45B5000ABA7D7 /* SpendingsVC.xib */,
+				9FCDE47320B45FCE00ABA7D7 /* AddSpendingVC.swift */,
+				9FCDE47220B45FCE00ABA7D7 /* AddSpendingVC.xib */,
 			);
 			path = Spendings;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FCDE46D20B4509200ABA7D7 /* SpendingsItemView.xib in Resources */,
+				9FCDE47420B45FCE00ABA7D7 /* AddSpendingVC.xib in Resources */,
 				9F43564C20B315B90066F2F4 /* Localizable.strings in Resources */,
 				9FCDE47120B45B5000ABA7D7 /* SpendingsVC.xib in Resources */,
 				9F43564A20B313550066F2F4 /* SpendingsView.xib in Resources */,
@@ -195,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FCDE46C20B4509200ABA7D7 /* SpendingsItemView.swift in Sources */,
+				9FCDE47520B45FCE00ABA7D7 /* AddSpendingVC.swift in Sources */,
 				9F43564F20B31ECB0066F2F4 /* SpendingsItem.swift in Sources */,
 				9F43564220B3125A0066F2F4 /* UIView+Embed.swift in Sources */,
 				9F43564420B3125A0066F2F4 /* UITableViewCellTemplate.swift in Sources */,
