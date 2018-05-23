@@ -15,23 +15,16 @@ class AddSpendingInputView: UIView
 
     @IBOutlet private var titleLabel: UILabel!
 
-    private var _title = ""
     var title: String
     {
         get
         {
-            return _title
+            return self.titleLabel.text ?? ""
         }
         set
         {
-            _title = newValue
-            self.updateTitle()
+            self.titleLabel.text = newValue
         }
-    }
-
-    private func updateTitle()
-    {
-        self.titleLabel.text = self.title
     }
 
     // MARK: - VALUE

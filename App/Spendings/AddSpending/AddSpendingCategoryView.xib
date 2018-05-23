@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14109"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,19 +15,56 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Np8-0S-PAq">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-IO-8M9">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Np8-0S-PAq">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMD-7R-lMT">
+                            <rect key="frame" x="8" y="0.0" width="304" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y38-nh-Ybf">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                            <connections>
+                                <action selector="toggleSelection:" destination="iN0-l3-epB" eventType="touchUpInside" id="uzr-P2-0hK"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Y38-nh-Ybf" secondAttribute="trailing" id="EdO-2z-M8X"/>
+                        <constraint firstAttribute="trailing" secondItem="DMD-7R-lMT" secondAttribute="trailing" constant="8" id="J2a-XX-XmG"/>
+                        <constraint firstItem="DMD-7R-lMT" firstAttribute="top" secondItem="Np8-0S-PAq" secondAttribute="top" id="Wes-jp-kD2"/>
+                        <constraint firstItem="Y38-nh-Ybf" firstAttribute="top" secondItem="Np8-0S-PAq" secondAttribute="top" id="WxO-yG-hD6"/>
+                        <constraint firstAttribute="bottom" secondItem="DMD-7R-lMT" secondAttribute="bottom" id="Ykh-ho-Hr8"/>
+                        <constraint firstItem="DMD-7R-lMT" firstAttribute="leading" secondItem="Np8-0S-PAq" secondAttribute="leading" constant="8" id="a2G-my-bOj"/>
+                        <constraint firstItem="Y38-nh-Ybf" firstAttribute="leading" secondItem="Np8-0S-PAq" secondAttribute="leading" id="h2b-s5-HnO"/>
+                        <constraint firstAttribute="bottom" secondItem="Y38-nh-Ybf" secondAttribute="bottom" id="ofj-h2-8Lz"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Np8-0S-PAq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JdV-FE-ria"/>
+                <constraint firstItem="1FK-IO-8M9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NbY-cq-ITP"/>
+                <constraint firstAttribute="bottom" secondItem="1FK-IO-8M9" secondAttribute="bottom" id="OCO-MC-HKg"/>
                 <constraint firstAttribute="trailing" secondItem="Np8-0S-PAq" secondAttribute="trailing" id="OfG-vl-z5G"/>
+                <constraint firstItem="1FK-IO-8M9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wBu-vk-lPm"/>
                 <constraint firstItem="Np8-0S-PAq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wa7-in-uWk"/>
                 <constraint firstAttribute="bottom" secondItem="Np8-0S-PAq" secondAttribute="bottom" id="wtj-o8-y0f"/>
+                <constraint firstAttribute="trailing" secondItem="1FK-IO-8M9" secondAttribute="trailing" id="yNa-Q1-RQq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="checkmarkView" destination="1FK-IO-8M9" id="qAn-h6-VWb"/>
+                <outlet property="selectionButton" destination="Y38-nh-Ybf" id="rdC-ds-Cj0"/>
+                <outlet property="titleLabel" destination="DMD-7R-lMT" id="wHz-VN-aoa"/>
+            </connections>
             <point key="canvasLocation" x="52" y="77"/>
         </view>
     </objects>

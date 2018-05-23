@@ -24,7 +24,7 @@ freely, subject to the following restrictions:
 
 import UIKit
 
-class AddSpendingView: UIView, UITableViewDataSource
+class AddSpendingView: UIView, UITableViewDataSource, AddSpendingCategoryViewDelegate
 {
 
     // MARK: - SETUP
@@ -51,14 +51,8 @@ class AddSpendingView: UIView, UITableViewDataSource
         set
         {
             _categories = newValue
-            self.updateCategories()
+            self.tableView.reloadData()
         }
-    }
-
-    private func updateCategories()
-    {
-        NSLog("updateCategories")
-        self.tableView.reloadData()
     }
 
     // MARK: - TABLE VIEW
@@ -145,6 +139,8 @@ class AddSpendingView: UIView, UITableViewDataSource
             cell.itemView.title = NSLocalizedString("AddSpending.Sum", comment: "")
             cell.itemView.value = self.item.sum
         }
+        // Do not highlight cell selection.
+        cell.selectionStyle = .none
 
         return cell
     }
@@ -171,10 +167,61 @@ class AddSpendingView: UIView, UITableViewDataSource
             )
             as! CellCategory
         
-        // TODO setup cell.
-        cell.backgroundColor = .yellow
+        let category = self.categories[indexPath.row]
+        cell.itemView.title = category
+        cell.itemView.isSelected = self.isCategorySelected(category)
+        cell.itemView.delegate = self
+
+        // Do not highlight cell selection.
+        cell.selectionStyle = .none
 
         return cell
+    }
+
+    // MARK: - SELECTED CATEGORIES
+
+    private var _selectedCategories = [String]()
+    var selectedCategories: [String]
+    {
+        get
+        {
+            return _selectedCategories
+        }
+        set
+        {
+            _selectedCategories = newValue
+            self.tableView.reloadData()
+        }
+    }
+
+    private func isCategorySelected(_ category: String) -> Bool
+    {
+        return self.selectedCategories.contains(where: { $0 == category })
+    }
+
+    func selectCategory(_ category: String, state: Bool)
+    {
+        let isSelected = self.isCategorySelected(category)
+        // Deselect.
+        if (isSelected && !state)
+        {
+            // NOTE We access private underscored variable to skip table refresh.
+            self._selectedCategories = self.selectedCategories.filter { $0 != category }
+        }
+        // Select.
+        else if (!isSelected && state)
+        {
+            // NOTE This does not lead to table refresh.
+            self.selectedCategories.append(category)
+        }
+
+        // DEBUG
+        NSLog("selected categories:")
+        for category in self.selectedCategories
+        {
+            NSLog("category '\(category)'")
+        }
+
     }
 
 }

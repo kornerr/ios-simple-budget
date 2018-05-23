@@ -95,7 +95,7 @@ class SpendingsCoordinator
         }
 
         // TODO REMOVE after testing
-        view.categories = ["Products", "Life", "Medicine", "Entertainment", "Rent", "Car", "Patrol"]
+        view.categories = ["Products", "Life", "Medicine", "Entertainment", "Rent", "Car", "Patrol"].sorted()
     }
 
     // MARK: - STUB
