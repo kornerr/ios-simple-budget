@@ -32,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9F0E5A2C20B2F913009E3982 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0E5A2C20B2F913009E3982 /* SimpleBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0E5A2F20B2F913009E3982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0E5A3620B2F913009E3982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F0E5A3920B2F913009E3982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		9F0E5A2D20B2F913009E3982 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F0E5A2C20B2F913009E3982 /* App.app */,
+				9F0E5A2C20B2F913009E3982 /* SimpleBudget.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F0E5A2B20B2F913009E3982 /* App */ = {
+		9F0E5A2B20B2F913009E3982 /* SimpleBudget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F0E5A3E20B2F913009E3982 /* Build configuration list for PBXNativeTarget "App" */;
+			buildConfigurationList = 9F0E5A3E20B2F913009E3982 /* Build configuration list for PBXNativeTarget "SimpleBudget" */;
 			buildPhases = (
 				9F0E5A2820B2F913009E3982 /* Sources */,
 				9F0E5A2920B2F913009E3982 /* Frameworks */,
@@ -162,9 +162,9 @@
 			);
 			dependencies = (
 			);
-			name = App;
+			name = SimpleBudget;
 			productName = SimpleBudget;
-			productReference = 9F0E5A2C20B2F913009E3982 /* App.app */;
+			productReference = 9F0E5A2C20B2F913009E3982 /* SimpleBudget.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -183,7 +183,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F0E5A2720B2F913009E3982 /* Build configuration list for PBXProject "App" */;
+			buildConfigurationList = 9F0E5A2720B2F913009E3982 /* Build configuration list for PBXProject "SimpleBudget" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -196,7 +196,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F0E5A2B20B2F913009E3982 /* App */,
+				9F0E5A2B20B2F913009E3982 /* SimpleBudget */,
 			);
 		};
 /* End PBXProject section */
@@ -397,7 +397,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F0E5A2720B2F913009E3982 /* Build configuration list for PBXProject "App" */ = {
+		9F0E5A2720B2F913009E3982 /* Build configuration list for PBXProject "SimpleBudget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F0E5A3C20B2F913009E3982 /* Debug */,
@@ -406,7 +406,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F0E5A3E20B2F913009E3982 /* Build configuration list for PBXNativeTarget "App" */ = {
+		9F0E5A3E20B2F913009E3982 /* Build configuration list for PBXNativeTarget "SimpleBudget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F0E5A3F20B2F913009E3982 /* Debug */,
