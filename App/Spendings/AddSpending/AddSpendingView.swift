@@ -179,6 +179,8 @@ class AddSpendingView: UIView, UITableViewDataSource, AddSpendingCategoryViewDel
     }
 
     // MARK: - SELECTED CATEGORIES
+    // TODO Consider extracting SelectedCategories model to manage
+    // TODO adding/removing/selecting in a separate file, outside the view
 
     private var _selectedCategories = [String]()
     var selectedCategories: [String]

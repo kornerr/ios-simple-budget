@@ -1,10 +1,23 @@
 
 import UIKit
 
+protocol AddSpendingInputViewDelegate
+{
+
+    func setInput(key: String, value: Int)
+
+}
+
 class AddSpendingInputView: UIView
 {
 
     // MARK: - SETUP
+
+    var delegate: AddSpendingInputViewDelegate?
+
+
+    CONTINUE should cells delegate at all??? Doesn't this break parent-child relationship?
+    CONTINUE think about it, this looks terribly wrong
 
     override func awakeFromNib()
     {
