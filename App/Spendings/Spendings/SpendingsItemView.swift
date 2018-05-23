@@ -31,9 +31,9 @@ class SpendingsItemView: UIView
         //self.dayLabel.font = .tbWishlistSizesItem
     }
     
-    func setSum(_ sum: Float)
+    func setSum(_ sum: Int)
     {
-        self.sumLabel.text = String(describing: Int(sum))
+        self.sumLabel.text = String(describing: sum)
     }
     
     // MARK: - CATEGORIES

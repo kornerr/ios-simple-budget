@@ -37,7 +37,7 @@ class AddSpendingView: UIView, UITableViewDataSource
 
     // MARK: - EDITED ITEM
 
-    var item: SpendingsItem?
+    var item = SpendingsItem()
 
     // MARK: - CATEGORIES
 
@@ -131,9 +131,20 @@ class AddSpendingView: UIView, UITableViewDataSource
                 for: indexPath
             )
             as! CellInput
-
-        // TODO setup cell.
-        cell.backgroundColor = .blue
+        // 0. Day.
+        if (indexPath.row == 0)
+        {
+            cell.itemView.title = NSLocalizedString("AddSpending.Day", comment: "")
+            let calendar = Calendar.current
+            let day = calendar.component(.day, from: self.item.date)
+            cell.itemView.value = day
+        }
+        // 1. Sum.
+        else
+        {
+            cell.itemView.title = NSLocalizedString("AddSpending.Sum", comment: "")
+            cell.itemView.value = self.item.sum
+        }
 
         return cell
     }

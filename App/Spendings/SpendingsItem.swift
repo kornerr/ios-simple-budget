@@ -27,7 +27,7 @@ import Foundation
 struct SpendingsItem
 {
     var date = Date()
-    var sum = Float(0)
+    var sum = 0
     var categories = [String]()
 }
 
