@@ -93,6 +93,9 @@ class SpendingsCoordinator
             // TODO save.
             strongNC.dismiss(animated: true)
         }
+
+        // TODO REMOVE after testing
+        view.categories = ["Products", "Life", "Medicine", "Entertainment", "Rent", "Car", "Patrol"]
     }
 
     // MARK: - STUB

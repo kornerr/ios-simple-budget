@@ -53,7 +53,6 @@ class SpendingsView: UIView, UITableViewDataSource
 
     private func updateItems()
     {
-        NSLog("updateItems")
         self.tableView.reloadData()
     }
 

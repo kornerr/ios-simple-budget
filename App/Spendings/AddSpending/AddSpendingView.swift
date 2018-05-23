@@ -24,7 +24,7 @@ freely, subject to the following restrictions:
 
 import UIKit
 
-class AddSpendingView: UIView
+class AddSpendingView: UIView, UITableViewDataSource
 {
 
     // MARK: - SETUP
@@ -32,11 +32,139 @@ class AddSpendingView: UIView
     override func awakeFromNib()
     {
         super.awakeFromNib()
+        self.setupTableView()
     }
 
     // MARK: - EDITED ITEM
 
     var item: SpendingsItem?
+
+    // MARK: - CATEGORIES
+
+    private var _categories = [String]()
+    var categories: [String]
+    {
+        get
+        {
+            return _categories
+        }
+        set
+        {
+            _categories = newValue
+            self.updateCategories()
+        }
+    }
+
+    private func updateCategories()
+    {
+        NSLog("updateCategories")
+        self.tableView.reloadData()
+    }
+
+    // MARK: - TABLE VIEW
+    
+    @IBOutlet private var tableView: UITableView!
+    // Use standard row height.
+    private let rowHeight: CGFloat = 44
+    
+    private func setupTableView() {
+        self.tableView.dataSource = self
+        self.tableView.rowHeight = self.rowHeight
+        self.registerCellInput()
+        self.registerCellCategory()
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        // Sections:
+        // * input
+        // * categories
+        return 2
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        if (section == 0)
+        {
+            // Items:
+            // * day
+            // * sum
+            return 2
+        }
+        // Categories count otherwise.
+        return self.categories.count
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        // Input.
+        if (indexPath.section == 0)
+        {
+            return self.cellInput(at: indexPath)
+        }
+        // Category.
+        return self.cellCategory(at: indexPath)
+    }
+
+    // MARK: - INPUT CELL
+
+    private let cellInputId = "CellInputId"
+    private typealias CellInputView = AddSpendingInputView
+    private typealias CellInput = UITableViewCellTemplate<CellInputView>
+
+    private func registerCellInput()
+    {
+        self.tableView.register(
+            CellInput.self,
+            forCellReuseIdentifier: self.cellInputId
+        )
+    }
+
+    private func cellInput(at indexPath: IndexPath) -> CellInput {
+        let cell =
+            self.tableView.dequeueReusableCell(
+                withIdentifier: self.cellInputId,
+                for: indexPath
+            )
+            as! CellInput
+
+        // TODO setup cell.
+        cell.backgroundColor = .blue
+
+        return cell
+    }
+
+    // MARK: - CATEGORY CELL
+
+    private let cellCategoryId = "CellCategoryId"
+    private typealias CellCategoryView = AddSpendingCategoryView
+    private typealias CellCategory = UITableViewCellTemplate<CellCategoryView>
+
+    private func registerCellCategory()
+    {
+        self.tableView.register(
+            CellCategory.self,
+            forCellReuseIdentifier: self.cellCategoryId
+        )
+    }
+
+    private func cellCategory(at indexPath: IndexPath) -> CellCategory {
+        let cell =
+            self.tableView.dequeueReusableCell(
+                withIdentifier: self.cellCategoryId,
+                for: indexPath
+            )
+            as! CellCategory
+        
+        // TODO setup cell.
+        cell.backgroundColor = .yellow
+
+        return cell
+    }
 
 }
 
