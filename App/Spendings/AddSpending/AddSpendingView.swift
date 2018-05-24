@@ -210,6 +210,8 @@ class AddSpendingView:
         {
             NSLog("category '\(category)'")
         }
+
+        self.validate()
     }
 
     func setInputValue(_ value: Int, forId id: String)
@@ -237,6 +239,8 @@ class AddSpendingView:
         {
             self.item.sum = value
         }
+
+        self.validate()
     }
 
     // MARK: - FOCUSABLE INPUT VIEW
@@ -246,6 +250,31 @@ class AddSpendingView:
     func focusIntoFocusableInputView()
     {
         self.focusableInputView?.focus()
+    }
+
+    // MARK: - VALIDITY
+
+    var isValid = false
+    var validityReport: SimpleCallback?
+
+    private func validate()
+    {
+        // TODO 1. Make sure day is a digit and within 1..31 range.
+        let dayIsValid = true
+
+        // 2. Make sure sum is greater than zero
+        let sumIsValid = self.item.sum > 0
+
+        // 3. Make sure at least one category is selected
+        let areCategoriesSelected = self.item.categories.count > 0
+
+        self.isValid = dayIsValid && sumIsValid && areCategoriesSelected
+        
+        // Report state.
+        if let report = self.validityReport
+        {
+            report()
+        }
     }
 
 }

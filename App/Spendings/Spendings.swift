@@ -30,6 +30,7 @@ class Spendings
     func addItem(_ item: SpendingsItem)
     {
         self.items.append(item)
+        // TODO Sort items by date
         self.reportItemsChanged()
     }
 

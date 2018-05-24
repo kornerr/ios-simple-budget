@@ -94,12 +94,19 @@ class SpendingsCoordinator
         }
 
         // Save.
-        vc.saveReport = { [weak nc, weak view] in
+        vc.saveReport = { [weak nc, weak view, weak self] in
             guard let strongNC = nc else { return }
             guard let strongView = view else { return }
-            // TODO save.
-            NSLog("TODO save item: '\(strongView.item)'")
+            guard let this = self else { return }
+            this.spendings.addItem(strongView.item)
             strongNC.dismiss(animated: true)
+        }
+
+        // Only enable saving for valid spendings.
+        view.validityReport = { [weak view, weak vc] in
+            guard let strongView = view else { return }
+            guard let strongVC = vc else { return }
+            strongVC.setSavingEnabled(strongView.isValid)
         }
 
         // TODO REMOVE after testing

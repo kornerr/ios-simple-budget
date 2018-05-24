@@ -99,6 +99,11 @@ class AddSpendingVC: UIViewController
 
     var saveReport: SimpleCallback?
 
+    func setSavingEnabled(_ state: Bool)
+    {
+        self.navigationItem.rightBarButtonItem?.isEnabled = state
+    }
+
     private func setupSave()
     {
         self.navigationItem.rightBarButtonItem =
@@ -107,6 +112,8 @@ class AddSpendingVC: UIViewController
                 target: self,
                 action: #selector(save(_:))
             )
+        // Disable saving by default.
+        self.setSavingEnabled(false)
     }
 
     @objc func save(_ button: UIBarButtonItem)
