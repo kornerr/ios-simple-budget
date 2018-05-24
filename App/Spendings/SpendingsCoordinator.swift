@@ -81,6 +81,12 @@ class SpendingsCoordinator
         let nc = UINavigationController(rootViewController: vc)
         parent.present(nc, animated: true)
 
+        // Focus into focusable input view after VC appearance.
+        vc.appearReport = { [weak view] in
+            guard let strongView = view else { return }
+            strongView.focusIntoFocusableInputView()
+        }
+
         // Cancel.
         vc.cancelReport = { [weak nc] in
             guard let strongNC = nc else { return }

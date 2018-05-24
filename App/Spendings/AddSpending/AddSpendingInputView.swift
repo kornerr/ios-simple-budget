@@ -20,7 +20,7 @@ class AddSpendingInputView: UIView
 
     // MARK: - ID
 
-    // Use it for delegates.
+    // Used for delegation.
     var id: String = "Undefined"
 
     // MARK: - TITLE
@@ -67,6 +67,15 @@ class AddSpendingInputView: UIView
     @IBAction func valueTextChanged(_ sender: Any)
     {
         self.delegate?.setInputValue(self.value, forId: self.id)
+    }
+
+    // MARK: - FOCUS
+
+    func focus()
+    {
+        self.valueTextField.becomeFirstResponder()
+        // Select all text.
+        self.valueTextField.selectAll(nil)
     }
     
 }

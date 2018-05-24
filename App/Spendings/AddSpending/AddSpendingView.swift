@@ -125,6 +125,11 @@ class AddSpendingView:
                 for: indexPath
             )
             as! CellInput
+
+        cell.itemView.delegate = self
+        // Do not highlight cell selection.
+        cell.selectionStyle = .none
+
         // 0. Day.
         if (indexPath.row == 0)
         {
@@ -140,10 +145,10 @@ class AddSpendingView:
             cell.itemView.id = "Sum"
             cell.itemView.title = NSLocalizedString("AddSpending.Sum", comment: "")
             cell.itemView.value = self.item.sum
+
+            // Mark this input view as focusable one.
+            self.focusableInputView = cell.itemView
         }
-        cell.itemView.delegate = self
-        // Do not highlight cell selection.
-        cell.selectionStyle = .none
 
         return cell
     }
@@ -232,6 +237,15 @@ class AddSpendingView:
         {
             self.item.sum = value
         }
+    }
+
+    // MARK: - FOCUSABLE INPUT VIEW
+
+    private weak var focusableInputView: AddSpendingInputView?
+
+    func focusIntoFocusableInputView()
+    {
+        self.focusableInputView?.focus()
     }
 
 }

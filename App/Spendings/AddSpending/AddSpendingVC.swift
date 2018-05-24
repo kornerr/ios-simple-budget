@@ -37,6 +37,20 @@ class AddSpendingVC: UIViewController
         self.setupSave()
     }
 
+
+    // MARK: - APPEARANCE
+
+    var appearReport: SimpleCallback?
+
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        if let report = self.appearReport
+        {
+            report()
+        }
+    }
+
     // MARK: - TITLE
 
     private func setupTitle()
