@@ -3,9 +3,7 @@ import UIKit
 
 protocol AddSpendingInputViewDelegate
 {
-
-    func setInput(key: String, value: Int)
-
+    func setInputValue(_ value: Int, forId id: String)
 }
 
 class AddSpendingInputView: UIView
@@ -15,14 +13,15 @@ class AddSpendingInputView: UIView
 
     var delegate: AddSpendingInputViewDelegate?
 
-
-    CONTINUE should cells delegate at all??? Doesn't this break parent-child relationship?
-    CONTINUE think about it, this looks terribly wrong
-
     override func awakeFromNib()
     {
         super.awakeFromNib()
     }
+
+    // MARK: - ID
+
+    // Use it for delegates.
+    var id: String = "Undefined"
 
     // MARK: - TITLE
 
@@ -51,9 +50,9 @@ class AddSpendingInputView: UIView
             if
                 let text = self.valueTextField.text,
                 let val = Int(text)
-                {
-                    return Int(val)
-                }
+            {
+                return Int(val)
+            }
             else
             {
                 return 0
@@ -64,5 +63,11 @@ class AddSpendingInputView: UIView
             self.valueTextField.text = String(describing: newValue)
         }
     }
+    
+    @IBAction func valueTextChanged(_ sender: Any)
+    {
+        self.delegate?.setInputValue(self.value, forId: self.id)
+    }
+    
 }
 

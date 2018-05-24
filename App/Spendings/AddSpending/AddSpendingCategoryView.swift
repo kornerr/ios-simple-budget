@@ -52,7 +52,6 @@ class AddSpendingCategoryView: UIView
             _isSelected = newValue
             self.updateSelection()
         }
-
     }
 
     private func setupSelection()
@@ -75,10 +74,7 @@ class AddSpendingCategoryView: UIView
     @IBAction func toggleSelection(_ sender: Any)
     {
         self.isSelected = !self.isSelected
-        if let delegate = self.delegate
-        {
-            delegate.selectCategory(self.title, state: self.isSelected)
-        }
+        self.delegate?.selectCategory(self.title, state: self.isSelected)
     }
     
 }
