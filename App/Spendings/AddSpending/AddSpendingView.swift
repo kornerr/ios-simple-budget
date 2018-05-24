@@ -214,8 +214,19 @@ class AddSpendingView:
 
         if (id == "Day")
         {
-            // TODO Change day in items' date.
-            //self.item.
+            let calendar = Calendar.current
+            var components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: self.item.date)
+            components.day = value
+            if let date = calendar.date(from: components)
+            {
+                self.item.date = date
+            }
+            else
+            {
+                // TODO Introduce log instance/protocol to report errors upwards.
+                // TODO Restrict max day value during input or simply use picker to select day
+                NSLog("AddSpendingView. ERROR: could not change item's date")
+            }
         }
         else if (id == "Sum")
         {

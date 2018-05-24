@@ -88,9 +88,11 @@ class SpendingsCoordinator
         }
 
         // Save.
-        vc.saveReport = { [weak nc] in
+        vc.saveReport = { [weak nc, weak view] in
             guard let strongNC = nc else { return }
+            guard let strongView = view else { return }
             // TODO save.
+            NSLog("TODO save item: '\(strongView.item)'")
             strongNC.dismiss(animated: true)
         }
 
